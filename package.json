@@ -1,0 +1,30 @@
+{
+  "name": "contact-manager",
+  "version": "1.0.0",
+  "description": "ShopBack interview technical test.",
+  "main": "index.js",
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wafendy/contact-manager.git"
+  },
+  "keywords": [
+    "contact",
+    "manager"
+  ],
+  "author": "William Afendy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wafendy/contact-manager/issues"
+  },
+  "homepage": "https://github.com/wafendy/contact-manager"
+}
