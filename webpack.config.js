@@ -1,26 +1,32 @@
+"use strict";
 var webpack = require('webpack');
+var path = require('path');
+var loaders = require('./webpack.loaders');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./entry.js",
+    entry: "./app/entry.jsx",
     output: {
         path: __dirname,
         filename: "bundle.js"
     },
+    resolve: {
+		  extensions: ['', '.js', '.jsx']
+	  },
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
-            _: "underscore"
+            React: "react",
+            ReactDOM: "react-dom",
+            reactRouter: "react-router"
         })
     ],
     module: {
-        loaders: [
-            { test: /\.css$/, loader: 'style-loader!css-loader' },
-            { test: /\.svg$/, loader: 'url-loader?mimetype=image/svg+xml' },
-            { test: /\.woff$/, loader: 'url-loader?mimetype=application/font-woff' },
-            { test: /\.woff2$/, loader: 'url-loader?mimetype=application/font-woff' },
-            { test: /\.eot$/, loader: 'url-loader?mimetype=application/font-woff' },
-            { test: /\.ttf$/, loader: 'url-loader?mimetype=application/font-woff' }
-        ]
+      loaders
+    },
+    devServer: {
+      inline:true,
+      port: 9999
     }
 };
